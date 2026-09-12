@@ -1,0 +1,1666 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Google Sans",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --light-grey:#a5a5a5;
+    --dark-grey:#707070;
+    --light-border:#292929;
+    --header-bg-color:rgba(50,50,50,.55);
+    --card-bg:#242424;
+    --bg-black:#141414;
+    --blue:#087eff;
+    --lap-height:875px;
+    --lap-width:1512px;
+}
+
+body{
+    width:var(--lap-width);
+    background-color:var(--bg-black);
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+header>section{
+    height: 55px;
+    width: 595px;
+    background-color: var(--header-bg-color);
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    height:70%;
+    width:117px;
+    cursor:pointer;
+    padding-top:2%;
+}
+
+.path{
+    cursor:pointer;
+}
+
+section>nav{
+    width:70%;
+    height:80%;
+    display:flex;
+    align-items:center;
+    justify-content: end;
+}
+
+nav>a{
+    width:25%;
+    height:100%;
+    text-align:center;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    font-weight:500;
+    color:white;
+    text-decoration:none;
+    position:relative;
+    letter-spacing:.2px;
+    font-size:.9em;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:2px;
+    width:0;
+    height:2px;
+    background:white;
+    transform:translateX(-50%);
+    transition:.4s;
+}
+
+nav a:hover::after{
+    width:70%;
+}
+
+.join-btn{
+    background:white;
+    color:black;
+    height:80%;
+    border-radius:30px;
+    transition:.3s ease-in-out;
+}
+
+.join-btn:hover{
+    transform:scale(1.03);
+}
+
+.pricing-page{
+    width:var(--lap-width);
+    min-height:var(--lap-height);
+    background-color:var(--bg-black);
+    padding-top:140px;
+    padding-bottom:40px;
+    position:relative;
+}
+
+.pricing-heading{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.pricing-heading h1{
+    font-size:clamp(4rem,5vw,5.2rem);
+    line-height:1;
+    letter-spacing:-3px;
+    font-weight:600;
+    color:white;
+}
+
+.pricing-heading p{
+    margin-top:26px;
+    width:70%;
+    color:var(--light-grey);
+    font-size:1.25em;
+    letter-spacing:.2px;
+    line-height:1.4;
+}
+
+.billing-section{
+    margin-top:34px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.billing-btns{
+    width:12%;
+    height:45px;
+    padding:4px;
+    border-radius:30px;
+    background-color:#252525;
+    display:flex;
+    align-items:center;
+    box-shadow:inset 0 1px 2px rgba(255,255,255,.04);
+}
+
+.billing-btns button{
+    width:50%;
+    height:100%;
+    border:none;
+    background:transparent;
+    color:#888;
+    border-radius:25px;
+    font-size:.95em;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease-in-out;
+}
+
+.billing-btns .billing-yearly{
+    background-color:#151515;
+    color:white;
+    box-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+
+.saving-text{
+    margin-top:20px;
+    color:var(--light-grey);
+    font-size:.95em;
+}
+
+.saving-text span{
+    color:var(--blue);
+    font-weight:600;
+}
+
+.plans{
+    width:52%;
+    margin:50px auto 0;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.plan-card{
+    min-height:490px;
+    border-radius:23px;
+    padding:26px 24px 24px;
+    position:relative;
+}
+
+.pro-card{
+    background-color:var(--card-bg);
+}
+
+.team-card{
+    background-color:transparent;
+    border:1px solid #303030;
+}
+
+.plan-title{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.plan-title h2{
+    font-size:1.55em;
+    font-weight:500;
+    letter-spacing:.5px;
+    display: inline-block;
+}
+
+.popular{
+    padding:4px 8px;
+    border-radius:6px;
+    background-color:var(--blue);
+    color:white;
+    font-size:.7em;
+    font-weight:600;
+}
+
+.plan-description{
+    margin-top:7px;
+    color:#a3a3a3;
+    font-size:1em;
+}
+
+.price-section{
+    display:flex;
+    align-items:center;
+    margin-top:23px;
+}
+
+.price-section h3{
+    font-size:2.75em;
+    line-height:1;
+}
+
+.price-details{
+    margin-left:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.price-details p{
+    color:#a3a3a3;
+    font-size:.75em;
+    line-height:1.25;
+}
+
+.get-started{
+    width:100%;
+    height:45px;
+    margin-top:20px;
+    border-radius:30px;
+    font-family:"Google Sans",sans-serif;
+    font-size:1em;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease-in-out;
+}
+
+.pro-button{
+    border:none;
+    background-color:white;
+    color:black;
+}
+
+.team-button{
+    border:1px solid #444;
+    background-color:transparent;
+    color:white;
+}
+
+.get-started:hover{
+    transform:translateY(-2px);
+}
+
+.features{
+    margin-top: 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature{
+    display:flex;
+    gap:11px;
+    color:#aaa;
+    font-size:.95em;
+}
+
+.feature i{
+    width:16px;
+    text-align:center;
+    color:#a9a9a9;
+    font-size:.9em;
+}
+
+.feature span{
+    letter-spacing: .5px;
+}
+
+.pro-card .feature:first-child{
+    color:#aaa;
+}
+
+.more-link{
+    width:max-content;
+    color:#aaa;
+    font-size:.95em;
+}
+
+.more-link:hover{
+    color:white;
+}
+
+.info{
+    width: 100%;
+    padding-top: 115px;
+}
+
+.info-box{
+    width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+}
+
+.info-item{
+    text-align: center;
+}
+
+.info-icon{
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 24px;
+}
+
+.info-item h3{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.info-item p{
+    margin-bottom: 12px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.info-item a{
+    color: #aaa;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.brands{
+    width: 100%;
+    padding-top: 205px;
+    padding-bottom: 20%;
+    overflow: hidden;
+}
+
+.brand-title{
+    text-align: center;
+}
+
+.brand-title h1{
+    color: white;
+    font-size: 56px;
+    line-height: 1.02;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.brand-list{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 8%;
+    padding: 0 20px;
+    animation: brand-carousel 75s linear infinite;
+}
+
+.brand{
+    width: 150px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand img{
+    width: 175px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.finance{
+    width:1512px;
+    height:700px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding-left:198px;
+    background-color:var(--bg-black);
+}
+
+.finance-content{
+    width:650px;
+    position:relative;
+    z-index:5;
+}
+
+.finance-tag{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:25px;
+    padding:0 8px;
+    border:1px solid white;
+    border-radius:7px;
+    color:white;
+    font-size:13px;
+    font-weight:500;
+}
+
+.finance-content h1{
+    margin-top:25px;
+    color:white;
+    font-size:58px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:-2.5px;
+}
+
+.finance-content p{
+    margin-top:24px;
+    width:640px;
+    color:#aaa;
+    font-size:20px;
+    line-height:1.35;
+    letter-spacing:.1px;
+}
+
+.finance-content button{
+    width:115px;
+    height:46px;
+    margin-top:25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#181818;
+    font-family:"Google Sans",sans-serif;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease-in-out;
+}
+
+.finance-content button:hover{
+    transform:translateY(-2px);
+}
+
+.finance-note{
+    display:block;
+    margin-top:27px;
+    color:#999;
+    font-size:14px;
+}
+
+.finance-apps{
+    width:26%;
+    height:75%;
+    position:absolute;
+    right:100px;
+    top:40px;
+    display:flex;
+    gap:12px;
+    overflow:hidden;
+    z-index:2;
+}
+
+.finance-apps::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:130px;
+    background:linear-gradient(to bottom,var(--bg-black),transparent);
+    z-index:10;
+}
+
+.finance-apps::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:150px;
+    background:linear-gradient(to top,var(--bg-black),transparent);
+    z-index:10;
+}
+
+.finance-column{
+    width:182px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.finance-column-one{
+    animation:finance-up 50s linear infinite;
+}
+
+.finance-column-two{
+    animation:finance-down 50s linear infinite;
+}
+
+.finance-app{
+    width:90%;
+    height:130px;
+    border:1px solid var(--light-border);
+    border-radius:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    background:var(--bg-black);
+}
+
+.finance-app img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    margin-bottom:13px;
+}
+
+.finance-app span{
+    color:var(--light-grey);
+    font-size:16px;
+    font-weight:500;
+}
+
+.compare{
+    width:100%;
+    padding-top:180px;
+    padding-bottom:120px;
+    background-color:var(--bg-black);
+    overflow:visible;
+}
+
+.compare-table{
+    width:77%;
+    margin:0 auto;
+}
+
+.compare-table th,
+.compare-table td{
+    text-align:left;
+}
+
+.compare-table thead th{
+    position:sticky;
+    top:100px;
+    z-index:20;
+    background:var(--bg-black);
+}
+
+.compare-table thead th.pro-plan{
+    background:#202020;
+    z-index:21;
+}
+
+.compare-table thead tr{
+    height:145px;
+}
+
+.compare-title{
+    width:270px;
+    vertical-align:top;
+    padding-top:10px;
+}
+
+.compare-title pre{
+    color:white;
+    font-size:2em;
+    line-height:1.05;
+    font-weight:600;
+}
+
+.plan{
+    width:160px;
+    padding:10px;
+    vertical-align:top;
+}
+
+.plan h3{
+    color:white;
+    font-size:1.2em;
+    font-weight:500;
+}
+
+.plan p{
+    margin-top:3px;
+    color:white;
+    font-size:1em;
+    font-weight:400;
+}
+
+.plan button{
+    width: 89px;
+    height: 33px;
+    margin-top: 12px;
+    border: 1px solid var(--light-border);
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    font-family: "Google Sans", sans-serif;
+    cursor: pointer;
+}
+
+.pro-plan{
+    width:165px;
+    background:#202020;
+    border-radius:14px 14px 0 0;
+}
+
+.pro-plan button{
+    background:white;
+    color:black;
+    border:none;
+}
+
+.pro-name{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.pro-name span{
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: var(--blue);
+    color: white;
+    font-size: 0.6em;
+    font-weight: 600;
+    margin-left: 4%;
+}
+
+.category{
+    height:55px;
+}
+
+.category th{
+    padding-top:25px;
+    color:white;
+    font-size:1.2em;
+    font-weight:500;
+}
+
+.compare-table tbody tr:not(.category){
+    height:40px;
+}
+
+.compare-table tbody td{
+    border-bottom:1px solid #303030;
+    color:var(--light-grey);
+    font-size:1em;
+    padding-left:10px;
+}
+
+.compare-table tbody td:first-child{
+    padding-left:0;
+    color:white;
+}
+
+.compare-table tbody td:nth-child(3){
+    background:#202020;
+    color:#aaa;
+}
+
+.compare-table tbody td i{
+    color:#888;
+    font-size:9px;
+    font-style:normal;
+    margin-left:3px;
+}
+
+.faq{
+    width:100%;
+    min-height:900px;
+    padding-top:150px;
+    padding-bottom:120px;
+    background-color:var(--bg-black);
+}
+
+.faq-title{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+}
+
+.faq-title h1{
+    color:white;
+    font-size:42px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:-1.8px;
+}
+
+.faq-box{
+    width:800px;
+    margin:65px auto 0;
+}
+
+.faq-item{
+    width:100%;
+    margin-bottom:13px;
+    border-radius:16px;
+    overflow:hidden;
+    background:#202020;
+}
+
+.faq-item input{
+    display:none;
+}
+
+.faq-item label{
+    width:100%;
+    min-height:63px;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    color:white;
+    font-size:1em;
+    font-weight:500;
+}
+
+.faq-item label i{
+    color:#aaa;
+    font-size:1em;
+    font-style:normal;
+    transition:.3s ease;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height .35s ease,opacity .25s ease,padding .35s ease;
+}
+
+.faq-answer p{
+    padding:0 25px;
+    color:var(--dark-grey);
+    font-size:14px;
+    line-height:1.5;
+}
+
+.faq-item input:checked + label i{
+    transform:rotate(180deg);
+    color:#aaa;
+}
+
+.faq-item input:checked ~ .faq-answer{
+    max-height:150px;
+    padding-bottom:18px;
+    opacity:1;
+}
+
+.faq-bottom{
+    margin-top:75px;
+    text-align:center;
+    color:var(--light-grey);
+    font-size:16px;
+}
+
+.faq-bottom a{
+    color:white;
+    text-decoration:underline;
+}
+
+.footer{
+    width: 100%;
+    height: 450px;
+    padding: 4% 12% 3%;
+    background: var(--bg-black);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-brand h2{
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.footer-brand p{
+    margin-top: 15px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.footer-links{
+    display: flex;
+    gap: 120px;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column span{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.footer-column a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.footer-column a:hover{
+    opacity: 0.6;
+}
+
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p{
+    margin: 0;
+    color: var(--light-grey);
+    font-size: 0.85em;
+}
+
+.footer-bottom p span{
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.footer-legal{
+    display: flex;
+    gap: 120px;
+    width: 26.3%;
+}
+
+.footer-legal a{
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.footer-legal a:hover{
+    color: white;
+}
+
+@keyframes finance-up{
+    0%{
+        transform:translateY(0);
+    }
+
+    100%{
+        transform:translateY(-1136px);
+    }
+}
+
+@keyframes finance-down{
+    0%{
+        transform:translateY(-1136px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes brand-carousel{
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-1100px);
+    }
+}
+
+@media (max-width:768px){
+    body{
+        width:768px;
+    }
+
+    main{
+        width:768px;
+    }
+
+    .pricing-page{
+        width:768px;
+        min-height:850px;
+        padding-top:130px;
+    }
+
+    header>section{
+        height:55px;
+        width:552px;
+    }
+
+    .logo{
+        height:70%;
+    }
+
+    section>nav{
+        width:68%;
+        
+    }
+
+    nav>a{
+        font-size:.9em;
+        width: 32%;
+    }
+
+    .pricing-heading h1{
+        font-size:4em;
+        letter-spacing:-2px;
+    }
+
+    .pricing-heading p{
+        width:75%;
+        font-size:1.1em;
+    }
+
+    .billing-section{
+        margin-top:30px;
+    }
+
+    .plans{
+        width:90%;
+        margin-top:45px;
+        gap:20px;
+    }
+
+    .plan-card{
+        min-height:500px;
+        padding:25px 22px;
+    }
+
+    .price-section h3{
+        font-size:2.5em;
+    }
+
+    .feature{
+        font-size:.9em;
+    }
+
+    .info{
+        padding-top: 90px;
+    }
+
+    .info-box{
+        width: 90%;
+        column-gap: 40px;
+    }
+
+    .info-item h3{
+        font-size: 20px;
+    }
+
+    .info-item p{
+        font-size: 15px;
+    }
+
+    .brands{
+        padding-top: 160px;
+        padding-bottom: 80px;
+    }
+
+    .brand-title h1{
+        font-size: 44px;
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+    }
+
+    .brand-list{
+        gap: 60px;
+        margin-top: 70px;
+    }
+
+    .billing-btns {
+        width: 25%;
+    }
+
+    .brand{
+        width: 140px;
+        height: 55px;
+    }
+
+    .brand img{
+        max-width: 140px;
+        max-height: 42px;
+    }
+
+    .finance{
+        width:768px;
+        height:auto;
+        padding-left:70px;
+    }
+
+    .finance-content{
+        width:500px;
+    }
+
+    .finance-tag{
+        height:24px;
+        font-size:12px;
+    }
+
+    .finance-content h1{
+        margin-top:22px;
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .finance-content p{
+        width: 100%;
+        margin-top:20px;
+        font-size:17px;
+        line-height:1.4;
+    }
+
+    .finance-content button{
+        width:110px;
+        height:44px;
+        margin-top:22px;
+        font-size:15px;
+    }
+
+    .finance-note{
+        margin-top:25px;
+        font-size:13px;
+    }
+
+    .finance-apps{
+        display: none;
+    }
+
+    .compare{
+        width:768px;
+        padding-top:80px;
+        padding-bottom:100px;
+    }
+
+    .compare-table{
+        width:700px;
+    }
+
+    .compare-table thead{
+        top:80px;
+    }
+
+    .compare-table thead tr{
+        height:100px;
+    }
+
+    .compare-title{
+        width:210px;
+        padding-top: 5px;
+    }
+
+    .compare-title h1{
+        font-size:26px;
+    }
+
+    .plan{
+        width:125px;
+        padding:8px;
+    }
+
+    .pro-plan{
+        width:140px;
+    }
+
+    .plan h3{
+        font-size:15px;
+    }
+
+    .plan p{
+        font-size:11px;
+    }
+
+    .plan button{
+        width:65px;
+        height:25px;
+        margin-top:11px;
+    }
+
+    .compare-table tbody td{
+        font-size:11px;
+    }
+
+    .category{
+        height:50px;
+    }
+
+    .category th{
+        font-size:15px;
+    }
+
+    .faq{
+        width:768px;
+        min-height:850px;
+        padding-top:130px;
+        padding-bottom:100px;
+    }
+
+    .faq-title h1{
+        font-size:38px;
+        letter-spacing:-1.5px;
+    }
+
+    .faq-box{
+        width:500px;
+        margin-top:38px;
+    }
+
+    .faq-item{
+        margin-bottom:5px;
+    }
+
+    .faq-item label{
+        min-height:44px;
+        padding:0 14px;
+        font-size:10px;
+    }
+
+    .faq-answer p{
+        padding:0 14px;
+        font-size:9px;
+    }
+
+    .faq-bottom{
+        margin-top:32px;
+        font-size:9px;
+    }
+
+    .footer{
+        width: 768px;
+        height: 475px;
+    }
+
+    .footer-legal {
+        width: 50%;
+    }
+
+    @keyframes finance-up{
+        0%{
+            transform:translateY(0);
+        }
+
+        100%{
+            transform:translateY(-260px);
+        }
+    }
+
+    @keyframes finance-down{
+        0%{
+            transform:translateY(-100px);
+        }
+
+        100%{
+            transform:translateY(160px);
+        }
+    }
+
+    @keyframes brand-carousel{
+        0%{
+            transform:translateX(0);
+        }
+
+        100%{
+            transform:translateX(-950px);
+        }
+    }
+
+}
+
+@media (max-width:375px){
+    body{
+        width:375px;
+    }
+
+    main{
+        width:375px;
+    }
+
+    header{
+        height:80px;
+    }
+
+    header>section{
+        height:45px;
+        width:344px;
+    }
+
+    .logo{
+        display:none;
+    }
+
+    section>nav{
+        width:94%;
+        justify-content: left;
+    }
+
+    nav>a{
+        font-size:.7em;
+        width: 32%;
+    }
+
+    .join-btn{
+        padding:0 8px;
+    }
+
+    .pricing-page{
+        width:375px;
+        height:1250px;
+        padding-top:125px;
+        padding-bottom:40px;
+    }
+
+    .pricing-heading h1{
+        width:90%;
+        font-size:2.8em;
+        letter-spacing:-1.5px;
+        line-height:1.05;
+    }
+
+    .pricing-heading p{
+        width:88%;
+        margin-top:20px;
+        font-size:.95em;
+        line-height:1.5;
+    }
+
+    .billing-section{
+        margin-top:25px;
+    }
+
+    .billing-btns{
+        width:160px;
+        height:42px;
+    }
+
+    .billing-btns button{
+        font-size:.85em;
+    }
+
+    .saving-text{
+        margin-top:17px;
+        font-size:.8em;
+    }
+
+    .plans{
+        width:90%;
+        margin-top:35px;
+        display:flex;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .plan-card{
+        height:455px;
+        border-radius:20px;
+        padding:22px 20px;
+    }
+
+    .plan-title h2{
+        font-size:1.35em;
+    }
+
+    .popular{
+        font-size:.65em;
+    }
+
+    .plan-description{
+        font-size:.9em;
+    }
+
+    .price-section{
+        margin-top:20px;
+    }
+
+    .price-section h3{
+        font-size:2.35em;
+    }
+
+    .price-details p{
+        font-size:.68em;
+    }
+
+    .get-started{
+        height:44px;
+        margin-top:18px;
+        font-size:.9em;
+    }
+
+    .features{
+        margin-top:18px;
+        gap: 18px;
+    }
+
+    .feature{
+        font-size:.82em;
+    }
+
+    .feature i{
+        font-size:.8em;
+    }
+
+    .more-link{
+        font-size:.82em;
+    }
+
+    .info{
+        padding-top: 75px;
+        margin-top: 35%;
+    }
+
+    .info-box{
+        width: 90%;
+        grid-template-columns: 1fr;
+        row-gap: 55px;
+    }
+
+    .info-icon{
+        margin-bottom: 8px;
+    }
+
+    .info-item h3{
+        font-size: 18px;
+    }
+
+    .info-item p{
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .info-item a{
+        font-size: 14px;
+    }
+
+    .brands{
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+
+    .brand-title h1{
+        font-size: 32px;
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .brand-list{
+        margin-top: 55px;
+        gap:0;
+    }
+
+    .brand{
+        width: 110px;
+        height: 45px;
+    }
+
+    .brand img{
+        max-width: 110px;
+        max-height: 32px;
+    }
+
+    .finance{
+        width:375px;
+        height:auto;
+        padding-left:30px;
+        padding-right:30px;
+        display:block;
+        padding-top:90px;
+    }
+
+    .finance-content{
+        width:315px;
+    }
+
+    .finance-tag{
+        height:23px;
+        padding:0 7px;
+        font-size:11px;
+        border-radius:6px;
+    }
+
+    .finance-content h1{
+        margin-top:20px;
+        font-size:39px;
+        letter-spacing:-1.5px;
+        line-height:1.05;
+    }
+
+    .finance-content p{
+        width:315px;
+        margin-top:18px;
+        font-size:15px;
+        line-height:1.45;
+    }
+
+    .finance-content button{
+        width:105px;
+        height:43px;
+        margin-top:20px;
+        font-size:14px;
+    }
+
+    .finance-note{
+        margin-top:22px;
+        font-size:12px;
+    }
+
+    .compare{
+        width:375px;
+        padding-top:30px;
+        padding-bottom:80px;
+        overflow-x:auto;
+    }
+
+    .compare-table{
+        width:700px;
+        margin-left:20px;
+    }
+
+    .compare-table thead{
+        top:75px;
+    }
+
+    .compare-table thead tr{
+        height:135px;
+    }
+
+    .compare-title{
+        width:190px;
+    }
+
+    .compare-title h1{
+        font-size:24px;
+        letter-spacing:-.8px;
+    }
+
+    .plan{
+        width:120px;
+        padding:8px;
+    }
+
+    .pro-plan{
+        width:135px;
+    }
+
+    .plan h3{
+        font-size:14px;
+    }
+
+    .plan p{
+        font-size:10px;
+    }
+
+    .plan button{
+        width:62px;
+        height:24px;
+        margin-top:10px;
+        font-size:9px;
+    }
+
+    .compare-table tbody td{
+        font-size:10px;
+    }
+
+    .category{
+        height:50px;
+    }
+
+    .category th{
+        font-size:14px;
+    }
+
+    .faq{
+        width:375px;
+        min-height:750px;
+        padding-top:110px;
+        padding-bottom:80px;
+    }
+
+    .faq-title h1{
+        width:90%;
+        font-size:32px;
+        line-height:1.05;
+        letter-spacing:-1.2px;
+    }
+
+    .faq-box{
+        width:90%;
+        margin-top:32px;
+    }
+
+    .faq-item{
+        margin-bottom:5px;
+        border-radius:7px;
+    }
+
+    .faq-item label{
+        min-height:43px;
+        padding:0 12px;
+        font-size:9px;
+    }
+
+    .faq-item label i{
+        font-size:11px;
+    }
+
+    .faq-answer p{
+        padding:0 12px;
+        font-size:8px;
+        line-height:1.5;
+    }
+
+    .faq-item input:checked ~ .faq-answer{
+        max-height:130px;
+        padding-bottom:12px;
+    }
+
+    .faq-bottom{
+        width:90%;
+        margin:30px auto 0;
+        font-size:8px;
+        line-height:1.5;
+    }
+
+    .footer {
+        height: 350px;
+        width: 375px;
+        padding: 4% 4% 3%
+    }
+
+    .footer-brand  {
+        width: 50%;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.5em;
+    }
+
+    .footer-brand p {
+        width: 80%;
+        font-size: 0.75em;
+        line-height: 2;
+    }
+
+    .footer-column span {
+        font-size: 0.8em;
+    }
+
+    .footer-links {
+        gap: 22px;
+    }
+
+    .footer-column a {
+        font-size: 0.7em;
+    }
+
+    .footer-legal {
+        width: 40.5%;
+        gap: 33px;
+    }
+
+    .footer-legal a{
+        font-size: 0.6em;
+    }
+
+    @keyframes finance-up{
+        0%{
+            transform:translateY(0);
+        }
+
+        100%{
+            transform:translateY(-236px);
+        }
+    }
+
+    @keyframes finance-down{
+        0%{
+            transform:translateY(-80px);
+        }
+
+        100%{
+            transform:translateY(156px);
+        }
+    }
+
+
+    @keyframes brand-carousel{
+        0%{
+            transform:translateX(0);
+        }
+
+        100%{
+            transform:translateX(-750px);
+        }
+    }
+}

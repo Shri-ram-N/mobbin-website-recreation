@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Google Sans", sans-serif;
+}
+
+:root{
+    --light-grey:#bdbaba;
+    --dark-grey:#3f3f3f;
+    --lap-height:868px;
+    --lap-width:1512px;
+}
+
+body{
+    width: var(--lap-width);
+}
+
+.parent{
+    height: var(--lap-height);
+    width: var(--lap-width);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.child1{
+    height: 160%;
+    width: 52%;
+    border-radius: 10px;
+    background: black url(images/leaf.jpg) no-repeat center / cover;
+    transform:rotate(-26deg);
+    position: relative;
+    right: 12%;
+    animation: zoom 25s ease-in-out infinite;
+}
+
+.child2{
+    height: 90%;
+    width: 50%;
+    background-color: white;
+    padding: 6% 8% 9%;
+}
+
+.text{
+    height: 13%;
+}
+
+.logo{
+    width: 23%;
+    display: block;
+    margin: 0 0 25px 0;
+}
+
+.text h1{
+    font-size: 2em;
+}
+
+.text p{
+    font-size: 2em;
+    color: grey;
+    margin-top: 4%;
+    letter-spacing: 1px;
+}
+
+form{
+    height: 59%;
+    margin-top: 13%;
+}
+
+form label{
+    letter-spacing: .5px;
+    display: block;
+    font-size: 1.2em;
+}
+
+.input-1{
+    height: 13%;
+    width: 71%;
+    margin: 2.5% 0 2.5% 0;
+    border: 1px solid #bdbaba;
+    border-radius: 8px;
+    padding-left: 2%;
+    outline: none;
+    font-size: 1em;
+    letter-spacing: .5px;
+}
+
+.forgot-pass-link{
+    color: #3f3f3f;
+    text-decoration: none;
+    margin: 0 0 0 4%;
+    width: 24%;
+    display: inline-block;
+    transition: scale .4s;
+    letter-spacing: .5px;
+    font-size: 0.8em;
+}
+
+.forgot-pass-link:hover{
+    scale: 1.1;
+}
+
+.check-label{
+    font-size: 1em;
+    width: 80%;
+    display: inline-block;
+}
+
+#checkbox{
+    accent-color: black;
+    height: 20px;
+    width: 20px;
+    vertical-align: sub;
+    margin: 2% 1% 0 0;
+}
+
+.login-btn{
+    height: 14%;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 800;
+    width: 71%;
+    border-radius: 8px;
+    margin-top: 6%;
+    transition: scale .4s;
+}
+
+.login-btn:hover{
+    scale: 1.05;
+}
+
+.or{
+    color: grey;
+    margin-left: 34%;
+    width: 5%;
+}
+
+.ic{
+    color: black;
+    font-size: 1.2em;
+    transition: 0.7s;
+}
+
+.brand-name{
+    color: grey;
+    display: inline;
+    margin: 0 8% 0 3%;
+}
+
+.brands{
+    display: flex;
+    width: 71%;
+    justify-content: space-between;
+    margin: 6% 0 0 0;
+}
+
+.border-brands{
+    height: 45px;
+    width: 49%;
+    border: 1px solid var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.border-brands:hover{
+    background-color: black;
+}
+
+.border-brands:hover .brand-name,.border-brands:hover .ic{
+    color: white;
+}
+
+.signup{
+    color: black;
+    width: 72%;
+    margin: 6% 0 0 0;
+    letter-spacing: .5px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.signup-link{
+    text-decoration: none;
+    transition: 0.4s;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.signup-link:hover{
+    scale: 1.2;
+    color: black;
+}
+
+@keyframes zoom{
+    0%{
+        background-size: 350%;
+    }
+    50%{
+        background-size: 300%;
+    }
+    100%{
+        background-size: 350%;
+    }
+}
+
+@media (max-width:768px){
+    .parent{
+        height: 1536px;
+    }
+
+    .logo{
+        display: block;
+        margin-bottom: 6%;
+        height: 4%;
+    }
+
+    .child1{
+        display: none;
+    }
+
+    .text h1 {
+        font-size: 3.5em;
+    }
+
+    .text p {
+        font-size: 2.5em;
+    }
+
+    .logo{
+        height: 35px;
+        margin: 10px 0 6px 0
+    }
+
+    form label {
+        font-size: 2.2em;
+    }
+
+    .input-1{
+        height: 11%;
+        margin:4% 0 4% 0;
+        font-size: 1.5em;
+    }
+
+    .child2{
+        width: 90%;
+        padding: 1% 0 0 16%;
+    }
+
+    .or{
+        margin-top: 8%;
+        font-size: 1.4em;
+    }
+
+    form{
+        margin: 5% 0 0 0;
+        height: 49%;
+    }
+
+    .login-btn{
+        height: 11%;
+        font-size: 1.5em;
+    }
+
+    .forgot-pass-link{
+        width: 100%;
+        margin: 1% 0 0 0;
+        font-size: 1.5em;
+    }
+
+    .check-label {
+        font-size: 1.5em;
+    }
+
+    #checkbox{
+        margin-top: 5%;
+    }
+
+    .border-brands {
+        height: 66px;
+    }
+
+    .ic {
+        font-size: 1.5em;
+    }
+
+    .brand-name {
+        font-size: 1.3em;
+    }
+
+    .signup{
+        margin: 7% 0 0 3px;
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width:200px) and (max-width:375px){
+    body{
+        width: 375px;
+    }
+
+    .parent{
+        height: 780px;
+        width: 100%;
+    }
+
+    .text h1{
+        font-size: 1.7em;
+    }
+
+    .text p{
+        font-size: 1em;
+        margin-top: 7%;
+    }
+
+    .child2{
+        width: 90%;
+        padding: 0 0 0 7%;
+    }
+
+    form{
+        margin: 5% 0 0 0;
+        height: 52%;
+    }
+    
+    form label {
+        font-size: 1em;
+    }
+
+    .input-1{
+        margin:5% 0 5% 0;
+        font-size: 0.8em;
+        width: 92%;
+        height: 11%;
+        padding-left: 3%;
+    }
+
+    .forgot-pass-link{
+        margin-top: 4%;
+        font-size: 0.8em;
+    }
+
+    .login-btn{
+        height: 13%;
+        width: 92%;
+        margin: 12% 0 0 0;
+        font-size: 0.9em;
+    }
+
+    .check-label{
+        font-size: 0.8em;
+    }
+
+    #checkbox{
+        height: 15px;
+        width: 15px;
+        vertical-align: sub;
+        margin-top: 8%;
+    }
+
+    .or{
+        margin: 6% 0 0 42%;
+        font-size: 1em;
+    }
+
+    .border-brands{
+        height: 41px;
+    }
+
+    .ic{
+        font-size: 0.9em;
+    }
+
+    .brands{
+        height: 7%;
+        width: 92%;
+        margin: 12% 0 0 0;
+    }
+
+    .brand-name{
+        font-size: 0.8em;
+    }
+
+    .signup{
+        font-size: 0.7em;
+        width: 95%;
+        margin: 12% 0 0 3px;
+    }
+}
