@@ -561,16 +561,19 @@ nav button:hover{
 }
 
 
+
 @media (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     html,
     body {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-    }
-
-    * {
-        box-sizing: border-box;
     }
 
     header {
@@ -579,6 +582,7 @@ nav button:hover{
 
     nav {
         width: 100%;
+        max-width: 100%;
         padding: 0 16px;
     }
 
@@ -596,6 +600,7 @@ nav button:hover{
 
     .video-section-text {
         width: 92%;
+        max-width: 100%;
     }
 
     .video-section-text h1 {
@@ -603,6 +608,7 @@ nav button:hover{
         font-size: clamp(1.8rem, 7vw, 2.8rem);
         white-space: normal;
         text-align: center;
+        overflow-wrap: break-word;
     }
 
     .categories {
@@ -639,10 +645,12 @@ nav button:hover{
 
     .info h1 {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
+        overflow-wrap: break-word;
     }
 
     .desc {
         font-size: 0.9rem;
+        line-height: 1.6;
     }
 
     .info button {
@@ -680,32 +688,38 @@ nav button:hover{
 
     .section-heading {
         width: 90%;
+        max-width: 100%;
     }
 
     .section-heading h1 {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
         letter-spacing: -1px;
+        overflow-wrap: break-word;
     }
 
     .section-heading p {
         width: 100%;
         font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .people-grid {
         width: 90%;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 16px;
     }
 
     .person-card {
         width: 100%;
+        min-width: 0;
         aspect-ratio: 0.85;
     }
 
     .overlay h3 {
         width: auto;
+        max-width: 100%;
         font-size: 14px;
+        overflow-wrap: break-word;
     }
 
     .overlay p {
@@ -721,45 +735,110 @@ nav button:hover{
 
     .quote-section h1 {
         width: 100%;
+        max-width: 100%;
         font-size: clamp(1.8rem, 7vw, 2.5rem);
         line-height: 1.2;
         letter-spacing: -1px;
+        overflow-wrap: break-word;
     }
 
     .footer {
+        position: relative;
+        bottom: auto;
         width: 100%;
         max-width: 100%;
         height: auto;
-        min-height: 350px;
-        padding: 30px 5%;
-        position: relative;
-        gap: 35px;
+        min-height: 0;
+        padding: 35px 24px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        overflow: hidden;
     }
 
     .footer-top {
-        gap: 25px;
-        flex-wrap: wrap;
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
     }
 
     .footer-brand {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .footer-brand h2 {
+        max-width: 100%;
+        font-size: 1.6em;
+        overflow-wrap: break-word;
+    }
+
+    .footer-brand p {
+        width: 100%;
+        max-width: 260px;
+        font-size: 0.85em;
+        line-height: 1.6;
     }
 
     .footer-links {
         width: 100%;
-        gap: 35px;
-        flex-wrap: wrap;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 16px;
+    }
+
+    .footer-column {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-column span {
+        max-width: 100%;
+        font-size: 0.95em;
+        overflow-wrap: break-word;
+    }
+
+    .footer-column a {
+        max-width: 100%;
+        font-size: 0.85em;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-bottom p {
+        max-width: 100%;
+        font-size: 0.75em;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
     }
 
     .footer-legal {
         width: 100%;
-        gap: 20px;
+        min-width: 0;
+        display: flex;
         flex-wrap: wrap;
+        gap: 12px 22px;
     }
 
-    .footer-bottom {
-        gap: 15px;
-        flex-wrap: wrap;
+    .footer-legal a {
+        max-width: 100%;
+        font-size: 0.75em;
+        overflow-wrap: anywhere;
     }
 }
 
@@ -784,6 +863,11 @@ nav button:hover{
         width: 90%;
     }
 
+    .category {
+        width: 38px;
+        height: 38px;
+    }
+
     .winner {
         padding: 55px 6%;
     }
@@ -797,7 +881,59 @@ nav button:hover{
         font-size: 1.8rem;
     }
 
+    .intro {
+        padding: 32px 6%;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .section-heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .people-grid {
+        width: 90%;
+    }
+
+    .quote-section {
+        min-height: 0;
+        padding: 55px 16px;
+    }
+
+    .footer {
+        padding: 30px 20px 24px;
+        gap: 28px;
+    }
+
     .footer-links {
-        gap: 24px;
+        column-gap: 12px;
+        row-gap: 24px;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.5em;
+    }
+
+    .footer-brand p {
+        max-width: 230px;
+        font-size: 0.8em;
+    }
+
+    .footer-column span {
+        font-size: 0.85em;
+    }
+
+    .footer-column a {
+        font-size: 0.75em;
+    }
+
+    .footer-legal {
+        gap: 12px 18px;
+    }
+
+    .footer-legal a {
+        font-size: 0.7em;
     }
 }
