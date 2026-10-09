@@ -560,36 +560,33 @@ nav button:hover{
     color: white;
 }
 
-
-
 @media (max-width: 768px) {
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
+
+    body {
+        width: 768px;
     }
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+    html {
+        width: 768px;
     }
 
     header {
-        width: 100%;
+        width: 768px;
+        height: 85px;
     }
 
     nav {
         width: 100%;
-        max-width: 100%;
-        padding: 0 16px;
+        padding: 0 3%;
+    }
+
+    nav div {
+        width: 15%;
     }
 
     .video-section {
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
+        width: 768px;
+        height: 768px;
     }
 
     .video-section video {
@@ -598,24 +595,29 @@ nav button:hover{
         object-fit: cover;
     }
 
+    .video-section-center {
+        width: 100%;
+        height: 18%;
+        bottom: 8%;
+    }
+
     .video-section-text {
-        width: 92%;
-        max-width: 100%;
+        width: 80%;
     }
 
     .video-section-text h1 {
-        max-width: 100%;
-        font-size: clamp(1.8rem, 7vw, 2.8rem);
-        white-space: normal;
+        font-size: 2.8em;
         text-align: center;
-        overflow-wrap: break-word;
+    }
+
+    .video-section-text a {
+        width: 153px;
     }
 
     .categories {
-        width: 85%;
-        max-width: 340px;
+        width: 35%;
         height: 60px;
-        top: 10px;
+        top: 8%;
     }
 
     .category {
@@ -624,10 +626,328 @@ nav button:hover{
         flex-shrink: 0;
     }
 
+    .intro {
+        width: 768px;
+        height: auto;
+        min-height: 230px;
+        padding: 40px 5%;
+    }
+
+    .intro p {
+        width: 75%;
+        font-size: 1.3em;
+    }
+
+    .awards-section {
+        width: 768px;
+    }
+
     .winner {
-        width: 100%;
+        width: 768px;
         min-height: auto;
-        padding: 70px 5%;
+        padding: 8% 5%;
+        gap: 5%;
+    }
+
+    .side {
+        flex-direction: row;
+    }
+
+    .below {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .info {
+        width: 40%;
+    }
+
+    .info h1 {
+        font-size: 2.2em;
+    }
+
+    .desc {
+        font-size: 0.95em;
+    }
+
+    .info button {
+        width: auto;
+        min-width: 100px;
+        min-height: 40px;
+        padding: 0 15px;
+    }
+
+    .section-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .photo {
+        width: 35%;
+        height: 450px;
+    }
+
+    .below .info {
+        width: 80%;
+    }
+
+    .below .photo {
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .team-section {
+        width: 768px;
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+
+    .section-heading h1 {
+        font-size: 3em;
+        letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .people-grid {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .person-card {
+        width: 100%;
+    }
+
+    .overlay h3 {
+        width: auto;
+        font-size: 0.85em;
+    }
+
+    .overlay p {
+        font-size: 0.75em;
+    }
+
+    .quote-section {
+        width: 768px;
+        height: 750px;
+        padding: 8% 5%;
+    }
+
+    .quote-section h1 {
+        width: 90%;
+        font-size: 2.8em;
+        letter-spacing: -1.5px;
+    }
+
+    .person img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .footer {
+        width: 768px;
+        height: 475px;
+        padding: 4% 4% 3%;
+        background: var(--bg-black);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .footer-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-brand {
+        width: auto;
+    }
+
+    .footer-brand h2 {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    .footer-brand p {
+        margin-top: 15px;
+        color: #999;
+        font-size: 0.9em;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 120px;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-column span {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+
+    .footer-column a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        color: var(--light-grey);
+        font-size: 0.85em;
+    }
+
+    .footer-bottom p span {
+        font-size: 1.8em;
+        vertical-align: middle;
+    }
+
+    .footer-legal {
+        display: flex;
+        gap: 120px;
+        width: 50%;
+    }
+
+    .footer-legal a {
+        color: var(--dark-grey);
+        text-decoration: none;
+        font-size: 0.85em;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 375px) {
+
+    html {
+        width: 375px;
+    }
+
+    body {
+        width: 375px;
+    }
+
+    header {
+        width: 375px;
+        height: 95px;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0 4%;
+    }
+
+    nav div {
+        width: 15%;
+    }
+
+    nav div svg {
+        width: 55px;
+        height: 20px;
+    }
+
+    nav p {
+        font-size: 0.8em;
+    }
+
+    nav button {
+        width: 90px;
+        height: 40px;
+        font-size: 0.8em;
+    }
+
+    .video-section {
+        width: 375px;
+        height: 600px;
+    }
+
+    .video-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-section-center {
+        width: 100%;
+        height: 24%;
+        bottom: 8%;
+    }
+
+    .video-section-text {
+        width: 94%;
+    }
+
+    .video-section-text h1 {
+        font-size: 1.9em;
+        text-align: center;
+    }
+
+    .video-section-text a {
+        width: 153px;
+        height: 45px;
+    }
+
+    .categories {
+        width: 90%;
+        height: 55px;
+        top: 8%;
+    }
+
+    .category {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+    }
+
+    .intro {
+        width: 375px;
+        height: auto;
+        min-height: 180px;
+        padding: 32px 6%;
+    }
+
+    .intro p {
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .awards-section {
+        width: 375px;
+    }
+
+    .winner {
+        width: 375px;
+        min-height: auto;
+        padding: 55px 6%;
         flex-direction: column;
         gap: 28px;
     }
@@ -637,89 +957,95 @@ nav button:hover{
         flex-direction: column;
     }
 
+    .below {
+        flex-direction: column;
+        gap: 28px;
+    }
+
     .info,
     .below .info {
         width: 100%;
-        max-width: 450px;
+    }
+
+    .section-icon {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 4%;
     }
 
     .info h1 {
-        font-size: clamp(1.8rem, 7vw, 2.4rem);
-        overflow-wrap: break-word;
+        font-size: 1.8em;
+    }
+
+    .category-name {
+        font-size: 0.8em;
     }
 
     .desc {
-        font-size: 0.9rem;
+        font-size: 0.9em;
         line-height: 1.6;
+    }
+
+    .vote {
+        font-size: 0.75em;
     }
 
     .info button {
         width: auto;
         min-width: 100px;
-        min-height: 40px;
-        padding: 0 16px;
+        height: 40px;
+        padding: 0 15px;
     }
 
     .photo,
     .below .photo {
         width: 100%;
-        max-width: 340px;
-        height: 420px;
+        height: 350px;
         margin: 0 auto;
     }
 
-    .intro {
-        width: 100%;
-        height: auto;
-        min-height: 180px;
-        padding: 40px 6%;
-    }
-
-    .intro p {
-        width: 100%;
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-
     .team-section {
-        width: 100%;
+        width: 375px;
         padding: 45px 0;
     }
 
     .section-heading {
         width: 90%;
-        max-width: 100%;
+        margin: 0 auto 35px;
     }
 
     .section-heading h1 {
-        font-size: clamp(1.8rem, 7vw, 2.4rem);
+        font-size: 1.8em;
         letter-spacing: -1px;
-        overflow-wrap: break-word;
     }
 
     .section-heading p {
         width: 100%;
-        font-size: 0.95rem;
+        font-size: 0.9em;
         line-height: 1.6;
     }
 
     .people-grid {
         width: 90%;
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
     .person-card {
         width: 100%;
-        min-width: 0;
         aspect-ratio: 0.85;
+    }
+
+    .overlay {
+        bottom: 22px;
+        left: 15px;
+        right: 15px;
     }
 
     .overlay h3 {
         width: auto;
         max-width: 100%;
         font-size: 14px;
-        overflow-wrap: break-word;
     }
 
     .overlay p {
@@ -727,213 +1053,114 @@ nav button:hover{
     }
 
     .quote-section {
-        width: 100%;
-        height: auto;
-        min-height: 550px;
-        padding: 70px 16px;
+        width: 375px;
+        height: 600px;
+        padding: 55px 16px;
     }
 
     .quote-section h1 {
         width: 100%;
-        max-width: 100%;
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        font-size: 1.8em;
         line-height: 1.2;
         letter-spacing: -1px;
-        overflow-wrap: break-word;
+    }
+
+    .person img {
+        width: 58px;
+        height: 58px;
     }
 
     .footer {
-        position: relative;
-        bottom: auto;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        min-height: 0;
-        padding: 35px 24px 25px;
+        width: 375px;
+        height: 350px;
+        padding: 4% 4% 3%;
+        background: var(--bg-black);
+        color: white;
         display: flex;
         flex-direction: column;
-        gap: 32px;
-        overflow: hidden;
+        justify-content: space-between;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
     }
 
     .footer-top {
         width: 100%;
-        min-width: 0;
         display: flex;
-        flex-direction: column;
-        gap: 28px;
+        justify-content: space-between;
     }
 
     .footer-brand {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
+        width: 50%;
     }
 
     .footer-brand h2 {
-        max-width: 100%;
-        font-size: 1.6em;
-        overflow-wrap: break-word;
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: 700;
     }
 
     .footer-brand p {
-        width: 100%;
-        max-width: 260px;
-        font-size: 0.85em;
-        line-height: 1.6;
+        margin-top: 15px;
+        color: #999;
+        width: 80%;
+        font-size: 0.75em;
+        line-height: 2;
     }
 
     .footer-links {
-        width: 100%;
-        min-width: 0;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px 16px;
+        display: flex;
+        gap: 22px;
     }
 
     .footer-column {
-        width: 100%;
-        min-width: 0;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
     .footer-column span {
-        max-width: 100%;
-        font-size: 0.95em;
-        overflow-wrap: break-word;
+        font-size: 0.8em;
+        font-weight: 600;
+        margin-bottom: 2px;
     }
 
     .footer-column a {
-        max-width: 100%;
-        font-size: 0.85em;
-        overflow-wrap: anywhere;
+        color: white;
+        text-decoration: none;
+        font-size: 0.7em;
+        cursor: pointer;
     }
 
     .footer-bottom {
         width: 100%;
-        min-width: 0;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .footer-bottom p {
-        max-width: 100%;
+        margin: 0;
+        color: var(--light-grey);
         font-size: 0.75em;
-        line-height: 1.6;
-        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom p span {
+        font-size: 1.8em;
+        vertical-align: middle;
     }
 
     .footer-legal {
-        width: 100%;
-        min-width: 0;
         display: flex;
+        gap: 33px;
+        width: 39%;
         flex-wrap: wrap;
-        gap: 12px 22px;
     }
 
     .footer-legal a {
-        max-width: 100%;
-        font-size: 0.75em;
-        overflow-wrap: anywhere;
-    }
-}
-
-@media (max-width: 375px) {
-    .video-section {
-        min-height: 560px;
-    }
-
-    .video-section-center {
-        height: 24%;
-    }
-
-    .video-section-text {
-        width: 94%;
-    }
-
-    .video-section-text h1 {
-        font-size: 1.9rem;
-    }
-
-    .categories {
-        width: 90%;
-    }
-
-    .category {
-        width: 38px;
-        height: 38px;
-    }
-
-    .winner {
-        padding: 55px 6%;
-    }
-
-    .photo,
-    .below .photo {
-        height: 350px;
-    }
-
-    .info h1 {
-        font-size: 1.8rem;
-    }
-
-    .intro {
-        padding: 32px 6%;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
-    .section-heading h1 {
-        font-size: 1.8rem;
-    }
-
-    .people-grid {
-        width: 90%;
-    }
-
-    .quote-section {
-        min-height: 0;
-        padding: 55px 16px;
-    }
-
-    .footer {
-        padding: 30px 20px 24px;
-        gap: 28px;
-    }
-
-    .footer-links {
-        column-gap: 12px;
-        row-gap: 24px;
-    }
-
-    .footer-brand h2 {
-        font-size: 1.5em;
-    }
-
-    .footer-brand p {
-        max-width: 230px;
-        font-size: 0.8em;
-    }
-
-    .footer-column span {
-        font-size: 0.85em;
-    }
-
-    .footer-column a {
-        font-size: 0.75em;
-    }
-
-    .footer-legal {
-        gap: 12px 18px;
-    }
-
-    .footer-legal a {
-        font-size: 0.7em;
+        color: var(--dark-grey);
+        text-decoration: none;
+        font-size: 0.6em;
+        cursor: pointer;
     }
 }
